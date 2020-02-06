@@ -3,7 +3,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
 #include <gcrypt.h>
 
 #define NEED_GCRYPT_VERSION "1.8.5"
