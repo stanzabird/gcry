@@ -10,17 +10,19 @@
 int usage() {
   std::cerr
     << "Usage: gcry [s.|a.|h] args...\n"
-    << "a: (asymetric)\n"
-    << " e encrypt\n"
-    << " d decrypt\n"
-    << " s sign\n"
+    << "s:  (symetric)\n"
+    << " -c cipher  use cypher 'cipher'\n"
+    << " e          encrypt\n"
+    << " d          decrypt\n"
     << "\n"
-    << "s: (symetric\n"
-    << " e encrypt\n"
-    << " d decrypt\n"
+    << "a:  (asymetric)\n"
+    << " e          encrypt\n"
+    << " d          decrypt\n"
+    << " s          sign\n"
+    << " es         encrypt and sign\n"
     << "\n"
-    << "h: (hashing)\n"
-    << "\n"
+    << "h:  (hashing)\n"
+    << " -f arg     use filename 'arg'\n"
     << "\n"
     << "\n"
     << "\n";
@@ -129,5 +131,7 @@ int main(int argc, char* argv[])
   std::cout
     << "info: Using libgcrypt version " << gcry_check_version(nullptr) << ".\n";
 
+  std::cout << "\n";
+  usage();
   return 0;
 }
