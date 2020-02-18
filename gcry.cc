@@ -7,6 +7,12 @@
 
 #define NEED_GCRYPT_VERSION "1.8.5"
 
+/* 
+
+
+QUESTION: IS THIS THE RIGHT APPROACH?
+
+ */
 int usage() {
   std::cerr
     << "Usage: gcry [s.|a.|h] args...\n"
